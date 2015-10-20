@@ -1,9 +1,61 @@
-Hello, I'm Azba! <br><br>
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <title>Azba Gurm</title>
+    {% endblock %}
 
-I'm interested in how technology can play a role in creating social impact. <br><br>
+    <style type = "text/css">
+    body {
+      background-color: #fafffd;
+      margin: 0;
+    }
+    .title {
+      text-align: left;
+      margin-top: 500px;
+      margin-left: 250px;
+      padding: 25px;
+      word-wrap: break-word;
+      font-family: helvetica;
+      font-size: 12px;
+      color: #000000;
+    }
+    .title h1 {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: none;
+      color: #294739;
+    }
+    .title a, a:visited {
+      text-decoration: none;
+      font-weight: medium;
+      color: #659157;
+    }
+    .title a:hover {
+      font-weight: medium;
+      color: #D0E1D4;
+    }
+    </style>
 
-I'm currently studying computer science, cultural anthropology, and entrepreneurship at the University of Michigan.
-I've built a <a href = "/projects">a few things</a>. 
-I love <a href = "http://azba.vsco.co">photography</a> and film, travel, tennis, plants, emojis, and mangoes.
-
-//links to resume, email, twitter??
+  </head>
+  <body>
+    <div id="content">
+        <div class = "title">
+          <h1>Hello, I'm Azba!</h1>
+          I'm interested in how technology can play a role in creating social impact. <br><br>
+          I'm currently studying computer science, cultural anthropology, and entrepreneurship at the University of Michigan.
+          I've built <a href = "/projects">a few things</a>. 
+          I love <a href = "http://azba.vsco.co">photography</a> and film, travel, tennis, plants, emojis, and mangoes.
+          <br><br>
+          resume / email / twitter
+        </div>
+    {% block content %}{% endblock %}
+    </div>
+    <a href="#" class="scroll_to_top">▲</a>
+    <div id="footer">
+      {% block footer %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
